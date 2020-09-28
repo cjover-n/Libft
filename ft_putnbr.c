@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjover-n <cjover-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/21 22:21:47 by cjover-n          #+#    #+#             */
-/*   Updated: 2020/09/29 00:32:52 by cjover-n         ###   ########.fr       */
+/*   Created: 2020/09/29 00:40:24 by cjover-n          #+#    #+#             */
+/*   Updated: 2020/09/29 00:40:39 by cjover-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dest, char *src)
+void	ft_putnbr(int nb)
 {
-	int i;
-	int j;
-
-	i = 0;
-	while (dest[i] != '\0')
+	if (nb < 0)
 	{
-		i++;
+		ft_putchar('-');
+		nb = nb * -1;
 	}
-	j = 0;
-	while (src[j] != '\0')
+	if (nb > 9)
 	{
-		dest[i + j] = src[j];
-		j++;
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
 	}
-	dest[i + j] = '\0';
-	return (dest);
+	else
+	{
+		ft_putchar(nb + '0');
+	}
 }

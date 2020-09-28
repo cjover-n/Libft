@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strcdup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjover-n <cjover-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/21 22:21:47 by cjover-n          #+#    #+#             */
-/*   Updated: 2020/09/29 00:32:52 by cjover-n         ###   ########.fr       */
+/*   Created: 2020/01/13 11:54:13 by cjover-n          #+#    #+#             */
+/*   Updated: 2020/09/29 00:32:51 by cjover-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dest, char *src)
+char    *ft_strcdup(const char *s1, int c)
 {
-	int i;
-	int j;
+    int     i;
+    char    *str;
 
-	i = 0;
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
-	j = 0;
-	while (src[j] != '\0')
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	return (dest);
+    i = 0;
+    while (s1[i] != (char)c && s1[i] != '\0')
+        i++;
+    if (!(str = malloc(i + 1 * sizeof(char))))
+        return (NULL);
+    str[i] = '\0';
+    while (i-- > 0)
+        str[i] = s1[i];
+    return (str);
 }

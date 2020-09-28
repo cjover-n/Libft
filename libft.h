@@ -6,7 +6,7 @@
 /*   By: cjover-n <cjover-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 20:37:31 by cjover-n          #+#    #+#             */
-/*   Updated: 2019/12/08 22:59:42 by cjover-n         ###   ########.fr       */
+/*   Updated: 2020/09/29 00:43:02 by cjover-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,10 @@ void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 				void (*del)(void *));
+char			*ft_strcdup(const char *s1, int c);
+char			*ft_strnew(size_t size);
+void			ft_putchar(char c);
+void			ft_putnbr(int nb);
+void			ft_putstr(char *str);
 
 #endif

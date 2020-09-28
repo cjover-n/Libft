@@ -6,7 +6,7 @@
 #    By: cjover-n <cjover-n@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/25 21:13:39 by cjover-n          #+#    #+#              #
-#    Updated: 2019/12/08 22:41:05 by cjover-n         ###   ########.fr        #
+#    Updated: 2020/09/29 00:42:42 by cjover-n         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ SRC =	ft_isalpha.c	ft_isprint.c	ft_strlcpy.c	ft_strrchr.c	\
 		ft_memcmp.c		ft_strnstr.c	ft_calloc.c		ft_strdup.c		\
 		ft_substr.c		ft_strjoin.c	ft_strtrim.c	ft_putchar_fd.c	\
 		ft_putstr_fd.c	ft_putendl_fd.c	ft_putnbr_fd.c	ft_strmapi.c	\
-		ft_itoa.c		ft_split.c		ft_lstiter.c
+		ft_itoa.c		ft_split.c		ft_lstiter.c	ft_strcdup.c	\
+		ft_strnew.c		ft_putchar.c	ft_putnbr.c		ft_putstr.c
 
 SRCBONUS =	ft_lstnew.c	ft_lstadd_front.c	ft_lstsize.c	ft_lstlast.c \
 		  	ft_lstadd_back.c	ft_lstdelone.c	ft_lstclear.c ft_lstmap.c
